@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tino Sabu - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+        <!-- ... your existing head content ... -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Tino Sabu</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#inquiry">Hire Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="profile-section">
+                        <img src="tino.jpg" alt="Tino Sabu" class="profile-image">
+                    </div>
+                    <div class="hero-text">
+                        <h1>Tino Sabu</h1>
+                        <p>Computer Science Student</p>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="cta-button">Get In Touch</a>
+                            <a href="CV.html" class="cv-button" download="CV.html" target="_blank">📄 Download CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I'm a passionate Computer Science student at SCMS School of Engineering and Technology with a strong foundation in software development and problem-solving. Currently in my third year, I'm focused on full-stack web development, algorithms, and data structures. I love building projects that solve real-world problems and am always eager to learn new technologies.</p>
+                <p>I'm actively seeking internship opportunities to apply my skills in a professional environment.</p>
+            </section>
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Web Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Concepts</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">Algorithms</span>
+                            <span class="skill-tag">OOP</span>
+                            <span class="skill-tag">Database Design</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Task Management App</h3>
+                        <p>A full-stack web application for managing tasks and projects with user authentication, real-time updates, and collaborative features. Built with React frontend and Node.js backend.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Algorithm Visualizer</h3>
+                        <p>Interactive web application that visualizes sorting and pathfinding algorithms. Helps students understand how different algorithms work through animated demonstrations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5 Canvas</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Algorithms</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Weather Dashboard</h3>
+                        <p>A responsive weather application that displays current weather and forecasts for multiple cities. Features include location search, weather maps, and data visualization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Campus Event Finder</h3>
+                        <p>Mobile-responsive web app for students to discover and register for campus events. Includes event filtering, calendar integration, and notification system.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Material-UI</span>
+                            <span class="tech-tag">PWA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education & Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - Present</div>
+                        <div class="timeline-title">Bachelor of Technology in Computer Science and Engineering</div>
+                        <div class="timeline-company">SCMS School of Engineering and Technology</div>
+                        <p>Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems, Software Engineering, Computer Networks</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020-2022</div>
+                        <div class="timeline-title">Higher Secondary Education</div>
+                        <div class="timeline-company">St.Thomas HSS Thottumukkam,Kozhikode</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024- Present</div>
+                        <div class="timeline-title">Freelance Web Developer</div>
+                        <div class="timeline-company">Self-Employed</div>
+                        <p>Developed websites for projects and student organizations. Managed complete project lifecycle from requirements gathering to deployment.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Let's Connect</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <a href="mailto:tinosabu2117@gmail.com">tinosabu2117@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/tinosabu" target="_blank">linkedin.com/in/tinosahu</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/tinosahu" target="_blank">github.com/tinosahu</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Location</h3>
+                        <p>Kozhikode, Kerala</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="inquiry">
+                <h2>Have a Project in Mind?</h2>
+                <div class="inquiry-form">
+                    <h3>Let's Work Together</h3>
+                    <form id="projectInquiryForm">
+                        <div class="form-group">
+                            <label for="clientName">Your Name *</label>
+                            <input type="text" id="clientName" name="clientName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientEmail">Your Email *</label>
+                            <input type="email" id="clientEmail" name="clientEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectName">Project Name *</label>
+                            <input type="text" id="projectName" name="projectName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectDescription">Project Description *</label>
+                            <textarea id="projectDescription" name="projectDescription" placeholder="Tell me about your project, requirements, timeline, and budget..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submitBtn">Send Project Inquiry</button>
+                        <div id="formMessage" class="form-message" style="display: none;"></div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2024 Tino Sabu. Designed and built by Tino Sabu.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
