@@ -5,34 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tino Sabu - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-        <!-- ... your existing head content ... -->
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Tino Sabu</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#inquiry">Hire Me</a></li>
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h1>TINO SABU</h1>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#hero" class="nav-link active">HOME</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#skills" class="nav-link">SKILLS</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#education" class="nav-link">EDUCATION</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                <li><a href="#inquiry" class="nav-link">HIRE ME</a></li>
             </ul>
         </nav>
-    </header>
+        
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/tinosabu" class="social-icon" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Tino-sabu" class="social-icon" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:tinosabu2117@gmail.com" class="social-icon" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </aside>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="profile-section">
-                        <img src="tino.jpg" alt="Tino Sabu" class="profile-image">
+    <main class="main-wrapper">
+        <section class="hero" id="hero">
+            <div class="hero-layout">
+                <!-- Photo Frame Section -->
+                <div class="photo-section">
+                    <div class="photo-frame">
+                        <div class="photo-border">
+                            <img src="tino.jpg" alt="Tino Sabu" class="profile-photo">
+                        </div>
+                        <div class="yellow-accent"></div>
                     </div>
-                    <div class="hero-text">
-                        <h1>Tino Sabu</h1>
-                        <p>Computer Science Student</p>
+                </div>
+
+                <!-- Content Section -->
+                <div class="content-section">
+                    <div class="content-wrapper">
+                        <h1 class="main-title">WEBSITE<br>DEVELOPER</h1>
+                        <p class="main-description">I'm Tino Sabu, a Computer Science student specializing in full-stack web development. I create dynamic and responsive websites that deliver exceptional user experiences.
+                        </p>
+                        <div class="signature">
+                            <p class="signature-text">Tino Sabu</p>
+                        </div>
                         <div class="hero-buttons">
                             <a href="#contact" class="cta-button">Get In Touch</a>
                             <a href="CV.html" class="cv-button" download="CV.html" target="_blank">📄 Download CV</a>
@@ -67,7 +97,7 @@
                             <span class="skill-tag">HTML/CSS</span>
                             <span class="skill-tag">React</span>
                             <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">PostgreSQL</span>
                         </div>
                     </div>
                     <div class="skill-category">
@@ -86,17 +116,16 @@
                 <h2>Featured Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3>Task Management App</h3>
+                        <h3>Vehicle Service Management Website</h3>
                         <p>A full-stack web application for managing tasks and projects with user authentication, real-time updates, and collaborative features. Built with React frontend and Node.js backend.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">React.js</span>
                             <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Express.js</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+                        <a href="https://github.com/Tino-sabu/Garage360" class="project-link">GitHub</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -147,6 +176,12 @@
             <section id="education">
                 <h2>Education & Experience</h2>
                 <div class="timeline">
+                     <div class="timeline-item">
+                        <div class="timeline-date">2024- Present</div>
+                        <div class="timeline-title">Freelance Web Developer</div>
+                        <div class="timeline-company">Self-Employed</div>
+                        <p>Developed websites for projects and student organizations. Managed complete project lifecycle from requirements gathering to deployment.</p>
+                    </div>
                     <div class="timeline-item">
                         <div class="timeline-date">2023 - Present</div>
                         <div class="timeline-title">Bachelor of Technology in Computer Science and Engineering</div>
@@ -157,12 +192,6 @@
                         <div class="timeline-date">2020-2022</div>
                         <div class="timeline-title">Higher Secondary Education</div>
                         <div class="timeline-company">St.Thomas HSS Thottumukkam,Kozhikode</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2024- Present</div>
-                        <div class="timeline-title">Freelance Web Developer</div>
-                        <div class="timeline-company">Self-Employed</div>
-                        <p>Developed websites for projects and student organizations. Managed complete project lifecycle from requirements gathering to deployment.</p>
                     </div>
                 </div>
             </section>
@@ -180,7 +209,7 @@
                     </div>
                     <div class="contact-item">
                         <h3>GitHub</h3>
-                        <a href="https://github.com/tinosahu" target="_blank">github.com/Tino-sabu</a>
+                        <a href="https://github.com/Tino-sabu" target="_blank">github.com/Tino-sabu</a>
                     </div>
                     <div class="contact-item">
                         <h3>Location</h3>
