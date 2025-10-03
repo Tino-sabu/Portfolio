@@ -11,8 +11,56 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypingEffect();
     initSkillTagAnimations();
     initEmailJS();
+    initMobileMenu();
 
 });
+
+// Mobile Menu Toggle
+function initMobileMenu() {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const sidebar = document.querySelector('.sidebar');
+    const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+    
+    if (mobileMenuToggle && sidebar) {
+        // Toggle sidebar on button click
+        mobileMenuToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+            
+            // Change icon
+            const icon = this.querySelector('i');
+            if (sidebar.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close sidebar when clicking on a nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sidebar.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideSidebar = sidebar.contains(event.target);
+            const isClickOnToggle = mobileMenuToggle.contains(event.target);
+            
+            if (!isClickInsideSidebar && !isClickOnToggle && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+}
 
 // Smooth scrolling for navigation links
 function initSmoothScrolling() {

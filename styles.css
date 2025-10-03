@@ -153,6 +153,35 @@ html {
     color: #666;
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    border: 2px solid #ffd700;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2001;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    background: #ffd700;
+    color: #000;
+}
+
+.mobile-menu-toggle i {
+    pointer-events: none;
+}
+
 /* Main Content Layout */
 .main-wrapper {
     margin-left: 280px;
@@ -801,67 +830,95 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Show mobile menu toggle */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    /* Sidebar - Hidden by default on mobile */
     .sidebar {
+        position: fixed;
         transform: translateX(-100%);
         transition: transform 0.3s ease;
-        width: 260px;
+        width: 280px;
+        z-index: 2000;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
     }
     
     .sidebar.active {
         transform: translateX(0);
     }
     
+    /* Main content takes full width */
     .main-wrapper {
         margin-left: 0;
     }
     
+    /* Hero section adjustments */
     .hero {
-        padding: 40px 20px;
+        padding: 60px 20px 40px;
+        min-height: auto;
     }
     
     .hero-layout {
+        flex-direction: column;
         gap: 40px;
     }
     
     .photo-frame {
-        width: 250px;
-        height: 320px;
+        width: 280px;
+        height: 360px;
+    }
+    
+    .photo-border {
+        padding: 15px;
+        border: 6px solid #000;
+    }
+    
+    .yellow-accent {
+        width: 50px;
+        height: 50px;
+        bottom: -12px;
+        left: -12px;
+    }
+    
+    .content-wrapper {
+        text-align: center;
     }
     
     .main-title {
-        font-size: 28px;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
+        font-size: 32px;
     }
     
-    .hero-text {
-        text-align: center;
+    .main-description {
+        font-size: 15px;
+        max-width: 100%;
     }
     
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text p {
-        font-size: 1.1rem;
-    }
-
-    .profile-image {
-        width: 150px;
-        height: 150px;
+    .signature-text {
+        font-size: 20px;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: stretch;
+        justify-content: center;
     }
 
     .cta-button, .cv-button {
         width: 100%;
+        padding: 14px 24px;
+    }
+
+    /* Section adjustments */
+    section:not(.hero) {
+        padding: 2.5rem 1.5rem;
+        margin-bottom: 1.5rem;
+        border-width: 2px;
+    }
+
+    .container {
+        padding: 0 15px;
     }
 
     h1 {
@@ -872,17 +929,100 @@ footer {
         font-size: 1.5rem;
     }
 
-    .skills-grid,
-    .projects-grid {
+    /* Skills grid */
+    .skills-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skill-category {
+        padding: 1.2rem;
     }
 
+    /* Projects grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        padding: 1.2rem;
+    }
+
+    /* Timeline adjustments */
     .timeline {
         padding-left: 1rem;
     }
 
     .timeline-item::before {
         left: -1rem;
+    }
+    
+    /* Contact grid */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Social icons in sidebar */
+    .social-icons {
+        gap: 12px;
+    }
+    
+    .social-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 15px 30px;
+    }
+    
+    .photo-frame {
+        width: 240px;
+        height: 310px;
+    }
+    
+    .photo-border {
+        padding: 12px;
+        border: 5px solid #000;
+    }
+    
+    .main-title {
+        font-size: 28px;
+    }
+    
+    .main-description {
+        font-size: 14px;
+    }
+    
+    .signature-text {
+        font-size: 18px;
+    }
+    
+    section:not(.hero) {
+        padding: 2rem 1rem;
+        border-radius: 10px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .sidebar {
+        width: 260px;
+    }
+    
+    .sidebar-brand h1 {
+        font-size: 20px;
+    }
+    
+    .sidebar-nav .nav-link {
+        font-size: 13px;
+        padding: 10px 15px;
     }
 }
 
